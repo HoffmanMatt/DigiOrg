@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:minWidth="40dp"
+    android:soundEffectsEnabled="true"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/eventNameOutputPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:maxWidth="180dp"
+        android:layout_centerVertical="true"
+        android:textColor="#0404B4"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/dateOutputPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textColor="#0404B4"
+        android:typeface="sans" />
+
+
+</RelativeLayout>

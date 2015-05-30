@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:soundEffectsEnabled="false"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewFlipperReminder" />
+
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/Tab_chronological"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/listViewChrono"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.79" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Tab_calender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="361dp"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/listViewReminder"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.79" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Tab_priority"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:focusable="true">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/listViewPriority"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.79" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AddEventButton"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:minWidth="160dp"
+        android:nestedScrollingEnabled="false" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsButton"
+        android:minWidth="160dp"
+        android:tint="@android:color/holo_orange_dark"
+        android:src="@android:drawable/ic_menu_preferences"
+        android:nestedScrollingEnabled="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/tabHost" />
+
+</RelativeLayout>

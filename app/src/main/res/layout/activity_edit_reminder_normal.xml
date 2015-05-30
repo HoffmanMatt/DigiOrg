@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:soundEffectsEnabled="true"
+    tools:context="com.DigiOrg.EditReminderNormal">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventText_EditReminderByDays_name"
+        android:hint="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/eventText_EditReminderByDays_comment"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/eventText_EditReminderByDays_comment"
+        android:hint="Additional Notes"
+        android:layout_marginTop="336dp"
+        android:layout_below="@+id/eventText_EditReminderByDays_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/button_EditReminderByDays_create"
+        android:minWidth="160dp"
+        android:nestedScrollingEnabled="false"
+        android:background="#ff96ff46"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/eventText_EditReminderByDays_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button_EditReminderByDays_back"
+        android:minWidth="160dp"
+        android:background="#ffff441f"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="108dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/spinner_EditReminderNormal_frequencyType"
+        android:layout_below="@+id/eventText_EditReminderByDays_name"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:minWidth="50dp"
+        android:id="@+id/spinner_EditReminderNormal_frequency"
+        android:layout_marginTop="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/spinner_EditReminderNormal_frequencyType"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="rerftrgerfgerg"
+        android:id="@+id/textView_EditReminderNormal_frequencyOutput"
+        android:textSize="21dp"
+        android:textAlignment="center"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/spinner_EditReminderNormal_frequency"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView_EditReminderByDays_deactiveOutput"
+        android:textSize="21dp"
+        android:textAlignment="center"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/spinner_EditReminderNormal_frequency"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_EditReminderNormal_dateOutput"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView_EditReminderNormal_frequencyOutput"
+        android:textAlignment="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

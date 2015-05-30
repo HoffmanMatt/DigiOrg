@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:soundEffectsEnabled="true"
+    tools:context="com.DigiOrg.EditReminderByDays">
+
+    <CheckBox
+        android:id="@+id/MondayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="57dp"
+        android:checked="false"
+        android:scaleX="1.25"
+        android:textSize="16sp"
+        android:scaleY="1.25"/>
+
+    <CheckBox
+        android:id="@+id/WednesdayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:textSize="16sp"
+        android:layout_below="@id/MondayCheckboxEdit"/>
+
+    <CheckBox
+        android:id="@+id/FridayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:scaleX="1.25"
+        android:scaleY="1.25"
+        android:textSize="16sp"
+        android:layout_below="@id/WednesdayCheckboxEdit"/>
+
+    <CheckBox
+        android:id="@+id/TuesdayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/MondayCheckboxEdit"
+        android:text="Tuesday"
+        android:layout_marginTop="57dp"
+        android:layout_marginLeft="90dp"
+        android:checked="false"
+        android:textSize="16sp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"/>
+
+    <CheckBox
+        android:id="@+id/ThursdayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TuesdayCheckboxEdit"
+        android:layout_toRightOf="@id/WednesdayCheckboxEdit"
+        android:text="Thursday"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="19dp"
+        android:checked="false"
+        android:textSize="16sp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"/>
+
+    <CheckBox
+        android:id="@+id/SaturdayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ThursdayCheckboxEdit"
+        android:layout_toRightOf="@id/FridayCheckboxEdit"
+        android:text="Saturday"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="17dp"
+        android:checked="false"
+        android:textSize="16sp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"/>
+
+    <CheckBox
+        android:id="@+id/SundayCheckboxEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FridayCheckboxEdit"
+        android:text="Sunday"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:textSize="16sp"
+        android:scaleX="1.25"
+        android:scaleY="1.25"/>
+
+    <Button
+        android:id="@+id/button_reminderEditByDays_changeTimeByDays"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/SundayCheckboxEdit"
+        android:layout_marginTop="68dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="time"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/button_EditReminderByDays_create"
+        android:minWidth="160dp"
+        android:nestedScrollingEnabled="false"
+        android:background="#ff96ff46"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/eventText_EditReminderByDays_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button_EditReminderByDays_back"
+        android:minWidth="160dp"
+        android:background="#ffff441f"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/eventText_EditReminderByDays_name"
+        android:hint="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/eventText_EditReminderByDays_comment"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/eventText_EditReminderByDays_comment"
+        android:hint="Additional Notes"
+        android:layout_marginTop="336dp"
+        android:layout_below="@+id/eventText_EditReminderByDays_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/textView_EditReminderByDays_deactiveOutput"
+        android:textSize="26dp"
+        android:textAlignment="center"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/SundayCheckboxEdit"
+        android:layout_alignParentEnd="true"
+        android:text=" " />
+
+</RelativeLayout>

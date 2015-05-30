@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.DigiOrg" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DigiOrg"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.DigiOrg.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TabActivity"
+            android:label="@string/title_activity_tab" >
+        </activity>
+        <activity
+            android:name=".DigiOrg"
+            android:label="@string/title_activity_new_event" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.CreateEvent"
+            android:label="@string/title_activity_create_event" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.DatePickerActivity"
+            android:label="@string/title_activity_date_picker" >
+        </activity>
+        <activity
+            android:name=".editActivityChrono"
+            android:label="@string/title_activity_edit_activity_chrono" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.EditActivity"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.EditDate"
+            android:label="@string/title_activity_edit_date" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.OptionsMenu"
+            android:label="@string/title_activity_options_menu" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.CreateReminderActivity"
+            android:label="@string/title_activity_create_reminder" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.EditReminderDateTime"
+            android:label="@string/title_activity_edit_reminder_date_time" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.EditReminderNormal"
+            android:label="@string/title_activity_edit_reminder" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.EditReminderByDays"
+            android:label="@string/title_activity_edit_reminder_by_days" >
+        </activity>
+        <activity
+            android:name="com.DigiOrg.ReminderDualEdit"
+            android:label="@string/title_activity_reminder_dual_edit" >
+        </activity>
+    </application>
+
+</manifest>
